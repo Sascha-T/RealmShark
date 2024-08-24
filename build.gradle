@@ -76,7 +76,6 @@ shadowJar {
     manifest {
         attributes 'Main-Class': mainClassName
     }
-    archiveFileName = "${applicationName}-${project.version}.jar"
 }
 
 apply plugin: 'com.github.johnrengelman.shadow'
