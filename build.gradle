@@ -63,6 +63,11 @@ public class Version {
 compileJava.dependsOn generateSources
 compileJava.source generateSources.outputs.files, sourceSets.main.java
 
+startShadowScripts.dependsOn jar
+startScripts.dependsOn shadowJar
+distTar.dependsOn shadowJar
+distZip.dependsOn shadowJar
+
 /**
  * add to vm optoins
  * "-XstartOnFirstThread"
